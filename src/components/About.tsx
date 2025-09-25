@@ -22,7 +22,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Texto */}
           <div>
-            <p className="text-gray-300 leading-relaxed mb-8 text-lg">
+            <p className="text-gray-300 leading-relaxed mb-8 text-lg text-justify">
               Soy Ingeniero en Sistemas y Telecomunicaciones, con interés en el desarrollo frontend de aplicaciones web y móviles. Trabajo con tecnologías como React, TypeScript, JavaScript, Supabase y Node.js, enfocándome en crear interfaces responsivas y funcionales. Me gusta aprender constantemente y aportar soluciones prácticas que mejoren la experiencia de los usuarios y el trabajo en equipo.
             </p>
 

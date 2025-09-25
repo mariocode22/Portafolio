@@ -46,7 +46,7 @@ export function Experience() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-300 leading-relaxed mb-4">
+                    <p className="text-gray-300 leading-relaxed mb-4 text-justify">
                       {job.desc}
                     </p>
 
