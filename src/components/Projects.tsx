@@ -121,9 +121,9 @@ export const Projects = () => {
           {/* Content */}
           <div className="overflow-hidden mx-4 md:mx-16">
             <div
-              className={`flex ${
-                itemsToShow === 1 ? "" : "gap-6"
-              } ${transitionEnabled ? "transition-transform duration-500" : ""}`}
+              className={`flex ${itemsToShow === 1 ? "" : "gap-6"} ${
+                transitionEnabled ? "transition-transform duration-500" : ""
+              }`}
               style={{
                 transform: `translateX(calc(-${
                   currentIndex * (100 / itemsToShow)
@@ -170,8 +170,22 @@ export const Projects = () => {
                     </div>
 
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                        {project.title}
+                      <h3 className="text-xl font-bold text-white mb-3 transition-colors">
+                        {project.website ? (
+                          <a
+                            href={project.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Abrir ${project.title} en nueva pestaña`}
+                            className="inline-block group-hover:text-cyan-400 transition-colors"
+                          >
+                            {project.title}
+                          </a>
+                        ) : (
+                          <span className="group-hover:text-cyan-400 transition-colors">
+                            {project.title}
+                          </span>
+                        )}
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                         {project.desc}

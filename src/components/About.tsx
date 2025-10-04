@@ -23,7 +23,12 @@ export function About() {
           {/* Texto */}
           <div>
             <p className="text-gray-300 leading-relaxed mb-8 text-lg text-justify">
-              Soy Ingeniero en Sistemas y Telecomunicaciones, con interés en el desarrollo frontend de aplicaciones web y móviles. Trabajo con tecnologías como React, TypeScript, JavaScript, Supabase y Node.js, enfocándome en crear interfaces responsivas y funcionales. Me gusta aprender constantemente y aportar soluciones prácticas que mejoren la experiencia de los usuarios y el trabajo en equipo.
+              Soy Ingeniero de Sistemas y Telecomunicaciones con enfoque en el desarrollo Front-End. Me apasiona crear interfaces modernas, funcionales y centradas en el usuario, utilizando tecnologías como React, TypeScript y Angular.
+
+              Cuento con experiencia en el desarrollo de aplicaciones web completas, integrando bases de datos con Supabase, sistemas de autenticación, carritos de compras, reservas en línea y pasarelas de pago como Wompi.
+              Aplico buenas prácticas de código, principios de arquitectura modular y diseño responsivo para garantizar soluciones eficientes, seguras y escalables.
+
+              Mi objetivo es seguir creciendo profesionalmente en entornos ágiles y colaborativos, aportando valor con soluciones tecnológicas que mejoren la experiencia del usuario y optimicen los procesos digitales.
             </p>
 
             {/* Stats */}
