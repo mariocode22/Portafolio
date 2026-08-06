@@ -106,7 +106,7 @@ export function Sidebar() {
                   Ing. de Sistemas
                 </p>
                 <span className="inline-block px-2 py-0.5 bg-[#0F0F0F] border border-[#2C2C2C] rounded text-[10px] font-medium text-[#B8B8B8]">
-                  Frontend Specialist
+                  Backend Specialist
                 </span>
               </div>
             </div>

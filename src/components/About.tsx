@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Zap, Target, UserCheck, Code2, Sparkles } from "lucide-react";
 
@@ -8,6 +9,8 @@ const stats = [
 ];
 
 export function About() {
+  const [isTouched, setIsTouched] = useState(false);
+
   return (
     <section id="about" className="py-28 px-6 md:px-12 bg-[#0F0F0F] relative overflow-hidden">
       <div className="absolute top-1/3 right-10 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -79,14 +82,20 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="md:col-span-5 flex justify-center md:justify-end"
           >
-            <div className="relative w-full max-w-sm group">
-              <div className="absolute -inset-1 bg-gradient-to-tr from-orange-600/20 via-red-800/20 to-amber-500/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition duration-500" />
+            <div 
+              className="relative w-full max-w-sm group cursor-pointer"
+              onTouchStart={() => setIsTouched(true)}
+              onTouchEnd={() => setIsTouched(false)}
+            >
+              <div className={`absolute -inset-1 bg-gradient-to-tr from-orange-600/20 via-red-800/20 to-amber-500/20 rounded-3xl blur-2xl transition duration-500 ${isTouched ? "opacity-100" : "opacity-50 group-hover:opacity-100"}`} />
               <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#1E1E1E]/80 backdrop-blur-xl shadow-2xl">
                 <div className="aspect-[4/5] w-full overflow-hidden">
                   <img
                     src="/fotoPerfil.jpg"
                     alt="Mario F Delgado"
-                    className="w-full h-full object-cover object-top grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                    className={`w-full h-full object-cover object-top transition-all duration-700 ease-out ${
+                      isTouched ? "grayscale-0 scale-105" : "grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105"
+                    }`}
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent opacity-80" />
