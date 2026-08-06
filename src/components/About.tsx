@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Zap, Target, UserCheck, Code2, Sparkles } from "lucide-react";
 
 const stats = [
-  { icon: Zap, value: "1+ Años", label: "de Experiencia" },
+  { icon: Zap, value: "3+ Años", label: "de Experiencia" },
   { icon: Target, value: "4+", label: "Proyectos Clave" },
-  { icon: UserCheck, value: "5+", label: "Tecnologías Dominadas" },
+  { icon: UserCheck, value: "Backend & Full Stack", label: "Enfoque Técnico" },
 ];
 
 export function About() {
@@ -43,10 +43,10 @@ export function About() {
             className="md:col-span-7"
           >
             <p className="text-[#B8B8B8] leading-relaxed mb-6 text-base md:text-lg">
-              Soy <span className="text-white font-medium">Ingeniero de Sistemas y Telecomunicaciones</span> especializado en el ecosistema Frontend. Me dedico a transformar ideas complejas en interfaces fluidas, accesibles y de alto rendimiento utilizando <span className="text-white font-medium">React, TypeScript</span> y <span className="text-white font-medium">Angular</span>.
+              Soy <span className="text-white font-medium">Desarrollador de Software</span> con experiencia en el desarrollo backend y soluciones empresariales. Actualmente me desempeño integrando sistemas complejos con <span className="text-white font-medium">Node.js, TypeScript y SAP</span>, enfocándome en la lógica de negocio, transformación de datos y rendimiento de bases de datos.
             </p>
             <p className="text-[#B8B8B8] leading-relaxed mb-8 text-base md:text-lg">
-              Cuento con experiencia construyendo aplicaciones web integrales: desde arquitecturas con <span className="text-white font-medium">Supabase</span> y sistemas de autenticación, hasta módulos de e-commerce con pasarelas como <span className="text-white font-medium">Wompi</span>. Enfoque riguroso en código limpio y diseño responsivo.
+              He construido aplicaciones web de forma autónoma utilizando <span className="text-white font-medium">Angular, Spring Boot y PostgreSQL</span>, conectando interfaces funcionales con flujos robustos de backend. Me apasiona escribir código limpio, optimizar procesos y asegurar la estabilidad en producción.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -60,7 +60,7 @@ export function About() {
                     <div className="p-2.5 w-fit rounded-xl bg-[#0F0F0F] border border-white/10 mb-3 text-amber-400 group-hover:border-orange-500/30 transition-colors">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <p className="text-white font-bold text-2xl tracking-tight">
+                    <p className="text-white font-bold text-xl tracking-tight">
                       {stat.value}
                     </p>
                     <p className="text-xs text-[#B8B8B8] mt-1 font-medium">
@@ -99,7 +99,7 @@ export function About() {
                       Código Limpio <Sparkles className="w-3 h-3 text-amber-400 inline" />
                     </p>
                     <p className="text-[11px] text-[#B8B8B8]">
-                      Arquitectura Modular & Scalable
+                      Backend & Integraciones
                     </p>
                   </div>
                 </div>

@@ -120,7 +120,7 @@ export function Hero() {
             show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Especialista en Desarrollo Frontend
+          Desarrollador Full Stack & Backend
         </p>
 
         {/* Descripción */}
@@ -129,7 +129,7 @@ export function Hero() {
             show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Apasionado por crear experiencias digitales innovadoras con React, TypeScript y tecnologías modernas, con un enfoque en diseño limpio y rendimiento.
+          Apasionado por transformar ideas en soluciones tecnológicas completas, conectando interfaces intuitivas con arquitecturas de backend robustas y escalables.
         </p>
       </div>
     </section>

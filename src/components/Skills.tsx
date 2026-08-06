@@ -1,31 +1,26 @@
 import { motion } from "framer-motion";
-import { Code2, Database, CreditCard, Wrench, Users, Sparkles } from "lucide-react";
+import { Code2, Database, Wrench, Users, Sparkles } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Frontend",
-    icon: <Code2 className="w-5 h-5 text-orange-400" />,
-    skills: ["JavaScript (ES6+)", "TypeScript", "React", "React Native", "HTML5", "CSS3", "TailwindCSS", "Redux"],
-  },
-  {
     title: "Backend",
     icon: <Database className="w-5 h-5 text-amber-400" />,
-    skills: ["Node.js", "Supabase", "MySQL", "SQL", "APIs REST", "Java", "Python"],
+    skills: ["Node.js", "TypeScript", "TypeORM", "Spring Boot", "SAP", "PostgreSQL", "MySQL", "Supabase", "SQL", "APIs REST", "Java"],
   },
   {
-    title: "Pagos",
-    icon: <CreditCard className="w-5 h-5 text-red-400" />,
-    skills: ["Stripe API", "Wompi API"],
+    title: "Frontend",
+    icon: <Code2 className="w-5 h-5 text-orange-400" />,
+    skills: ["Angular", "React", "JavaScript (ES6+)", "TailwindCSS", "React Native", "HTML5", "CSS3"],
   },
   {
     title: "Herramientas",
     icon: <Wrench className="w-5 h-5 text-rose-400" />,
-    skills: ["Git", "GitHub", "VS Code", "Figma"],
+    skills: ["Git", "GitHub", "VS Code", "Figma", "DBeaver", "Veritran Studio"],
   },
   {
-    title: "Metodologías",
+    title: "Metodologías y Calidad",
     icon: <Users className="w-5 h-5 text-yellow-500" />,
-    skills: ["Agile", "Scrum"],
+    skills: ["Agile", "Scrum", "Pruebas"],
   },
 ];
 
