@@ -1,70 +1,111 @@
-import { Zap, Target, UserCheck } from "lucide-react";
+import { motion } from "framer-motion";
+import { Zap, Target, UserCheck, Code2, Sparkles } from "lucide-react";
+
+const stats = [
+  { icon: Zap, value: "1+ Años", label: "de Experiencia" },
+  { icon: Target, value: "4+", label: "Proyectos Clave" },
+  { icon: UserCheck, value: "5+", label: "Tecnologías Dominadas" },
+];
 
 export function About() {
   return (
-    <section
-      id="about"
-      className="py-20 px-8 bg-gradient-to-b from-black via-[#0a0a0f] to-black relative"
-    >
-      {/* Fondo glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 to-purple-900/10 pointer-events-none" />
+    <section id="about" className="py-28 px-6 md:px-12 bg-[#0F0F0F] relative overflow-hidden">
+      <div className="absolute top-1/3 right-10 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(0,255,255,0.7)] tracking-wide uppercase">
+      <div className="max-w-5xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <span className="p-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-orange-400">
+              <Sparkles className="w-3.5 h-3.5" />
+            </span>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">
+              Perfil Profesional
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
             Sobre mí
           </h2>
-          <div className="w-28 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mt-4 rounded-full" />
-        </div>
+          <div className="w-16 h-1 bg-gradient-to-r from-orange-500 via-red-600 to-amber-400 rounded-full" />
+        </motion.div>
 
-        {/* Content */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Texto */}
-          <div>
-            <p className="text-gray-300 leading-relaxed mb-8 text-lg text-justify">
-              Soy Ingeniero de Sistemas y Telecomunicaciones con enfoque en el desarrollo Front-End. Me apasiona crear interfaces modernas, funcionales y centradas en el usuario, utilizando tecnologías como React, TypeScript y Angular.
-
-              Cuento con experiencia en el desarrollo de aplicaciones web completas, integrando bases de datos con Supabase, sistemas de autenticación, carritos de compras, reservas en línea y pasarelas de pago como Wompi.
-              Aplico buenas prácticas de código, principios de arquitectura modular y diseño responsivo para garantizar soluciones eficientes, seguras y escalables.
-
-              Mi objetivo es seguir creciendo profesionalmente en entornos ágiles y colaborativos, aportando valor con soluciones tecnológicas que mejoren la experiencia del usuario y optimicen los procesos digitales.
+        <div className="grid md:grid-cols-12 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="md:col-span-7"
+          >
+            <p className="text-[#B8B8B8] leading-relaxed mb-6 text-base md:text-lg">
+              Soy <span className="text-white font-medium">Ingeniero de Sistemas y Telecomunicaciones</span> especializado en el ecosistema Frontend. Me dedico a transformar ideas complejas en interfaces fluidas, accesibles y de alto rendimiento utilizando <span className="text-white font-medium">React, TypeScript</span> y <span className="text-white font-medium">Angular</span>.
+            </p>
+            <p className="text-[#B8B8B8] leading-relaxed mb-8 text-base md:text-lg">
+              Cuento con experiencia construyendo aplicaciones web integrales: desde arquitecturas con <span className="text-white font-medium">Supabase</span> y sistemas de autenticación, hasta módulos de e-commerce con pasarelas como <span className="text-white font-medium">Wompi</span>. Enfoque riguroso en código limpio y diseño responsivo.
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-              <div className="p-6 rounded-xl border border-purple-600/40 bg-[#111]/70 hover:shadow-cyan-500/30 transition-all duration-300 text-center">
-                <Zap className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">1+ Años</p>
-                <p className="text-sm text-gray-400">de Experiencia</p>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {stats.map((stat, i) => {
+                const Icon = stat.icon;
+                return (
+                  <div
+                    key={i}
+                    className="p-5 rounded-2xl border border-white/10 bg-[#1E1E1E]/50 backdrop-blur-xl transition-all duration-300 hover:border-orange-500/40 hover:-translate-y-1 hover:shadow-xl group"
+                  >
+                    <div className="p-2.5 w-fit rounded-xl bg-[#0F0F0F] border border-white/10 mb-3 text-amber-400 group-hover:border-orange-500/30 transition-colors">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <p className="text-white font-bold text-2xl tracking-tight">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs text-[#B8B8B8] mt-1 font-medium">
+                      {stat.label}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
 
-              <div className="p-6 rounded-xl border border-purple-600/40 bg-[#111]/70 hover:shadow-purple-500/30 transition-all duration-300 text-center">
-                <Target className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">4+</p>
-                <p className="text-sm text-gray-400">Proyectos Completados</p>
-              </div>
-
-              <div className="p-6 rounded-xl border border-purple-600/40 bg-[#111]/70 hover:shadow-pink-500/30 transition-all duration-300 text-center">
-                <UserCheck className="w-6 h-6 text-pink-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">5+</p>
-                <p className="text-sm text-gray-400">Tecnologías Dominadas</p>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="md:col-span-5 flex justify-center md:justify-end"
+          >
+            <div className="relative w-full max-w-sm group">
+              <div className="absolute -inset-1 bg-gradient-to-tr from-orange-600/20 via-red-800/20 to-amber-500/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition duration-500" />
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#1E1E1E]/80 backdrop-blur-xl shadow-2xl">
+                <div className="aspect-[4/5] w-full overflow-hidden">
+                  <img
+                    src="/fotoPerfil.jpg"
+                    alt="Mario F Delgado"
+                    className="w-full h-full object-cover object-top grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-[#0F0F0F]/80 backdrop-blur-md border border-white/10 flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-orange-500/10 border border-orange-500/20 text-orange-400">
+                    <Code2 className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-white flex items-center gap-1">
+                      Código Limpio <Sparkles className="w-3 h-3 text-amber-400 inline" />
+                    </p>
+                    <p className="text-[11px] text-[#B8B8B8]">
+                      Arquitectura Modular & Scalable
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Imagen */}
-          <div className="flex justify-center">
-            <img
-              src="/profile-new.png"
-              alt="Sobre mí"
-              className="w-85 h-100 rounded-full mx-auto mb-4 border-2 border-purple-600 shadow-lg shadow-cyan-500/50 object-cover"
-            />
-
-
-
-
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
